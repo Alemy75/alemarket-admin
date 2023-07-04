@@ -1,3 +1,4 @@
+import { PageWrapper } from 'App.styled'
 import { FC } from 'react'
 import { Helmet } from 'react-helmet'
 
@@ -7,7 +8,9 @@ const ProductDetailsPage: FC = ({}) => {
             <Helmet>
                 <title>Страница продукта</title>
             </Helmet>
-            <h1>Страница продукта</h1>
+            <PageWrapper>
+                <h1>Страница продукта</h1>
+            </PageWrapper>
         </>
     )
 }

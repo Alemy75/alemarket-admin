@@ -1,3 +1,4 @@
+import { PageWrapper } from 'App.styled'
 import { FC } from 'react'
 import { Helmet } from 'react-helmet'
 
@@ -7,7 +8,9 @@ const AccountSettingsPage: FC = ({}) => {
             <Helmet>
                 <title>Настройки аккаунта</title>
             </Helmet>
-            <h1>Настройки аккаунта</h1>
+            <PageWrapper>
+                <h1>Настройки аккаунта</h1>
+            </PageWrapper>
         </>
     )
 }
