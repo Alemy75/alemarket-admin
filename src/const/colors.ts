@@ -1,7 +1,8 @@
 const colors: { [k: string]: string } = {
-    primary: '#45a9da',
-    secondary: '#45a9da',
-    discount: '#cccccc'
+    primary: '#2c7dd4',
+    secondary: '#1c1c1c',
+    discount: '#cccccc',
+    textcol: '#212121',
 }
 
 export default colors

@@ -1,18 +1,19 @@
-import { FOOTER_HEIGHT, HEADER_HEIGHT } from "const";
-import colors from "const/colors";
-import { createGlobalStyle, styled } from "styled-components";
+import { FOOTER_HEIGHT, HEADER_HEIGHT } from 'const'
+import colors from 'const/colors'
+import { createGlobalStyle, styled } from 'styled-components'
 
 export const AppStyles = createGlobalStyle`
     body {
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         margin: 0;
-        font-family: 'Montserrat', sans-serif;
+        font-family: 'Comfortaa', cursive;
         font-size: 14px;
         font-style: normal;
-        font-weight: normal;
-        color: #5ES873
+        font-weight: 500;
+        color: ${colors.textcol}
         min-width: 320px;
+        
     }
 
     *,
@@ -70,19 +71,24 @@ export const AppStyles = createGlobalStyle`
 
 export const PageWrapper = styled.div`
     padding: 20px;
-    min-height: calc(100vh - ${HEADER_HEIGHT}px - ${FOOTER_HEIGHT}px)
+    min-height: calc(100vh - ${HEADER_HEIGHT}px - ${FOOTER_HEIGHT}px);
 `
 
-export const Footer= styled.div`
+export const Footer = styled.div`
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     background-color: ${colors.primary};
-    color: #fff;
+    color: white;
     height: ${FOOTER_HEIGHT}px;
 
     > :last-child {
         cursor: pointer;
+        font-weight: 700;
     }
 `
 
+export const Rights = styled.span`
+    font-weight: 500;
+    opacity: 0.7;
+`

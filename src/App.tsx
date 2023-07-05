@@ -1,4 +1,4 @@
-import { AppStyles, Footer } from 'App.styled'
+import { AppStyles, Footer, Rights } from 'App.styled'
 import Header from 'features/Header/Header'
 import { Suspense } from 'react'
 import PrivateRoutes from 'routes/PrivateRoutes'
@@ -17,7 +17,10 @@ export const App = () => {
             </Suspense>
 
             <Footer>
-                <div>ALEMARKET .INC</div>
+                <div>Alemarket</div>
+                <Rights>
+                Все права защищены
+                </Rights>
             </Footer>
         </>
     )

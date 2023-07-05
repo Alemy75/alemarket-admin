@@ -13,7 +13,7 @@ const HomePage: FC = ({}) => {
             </Helmet>
             <PageWrapper>
                 <ProductGroup>
-                    <h1>Главная</h1>
+                    <h1>Рекомендуемые товары</h1>
                     <ProductGroupContainer>
                         {dummyProducts.map(product => (
                             <ProductCard
