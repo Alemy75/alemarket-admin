@@ -44,8 +44,8 @@ export const Description = styled.div`
 
 export const LikeWrapper = styled.div`
     cursor: pointer;
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     position: absolute;
     top: 0;
     right: 0;

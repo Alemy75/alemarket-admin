@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { FC, useState } from 'react'
 import {
     Wrapper,
     Image,
@@ -10,6 +10,7 @@ import {
     LikeWrapper,
 } from './styled'
 import { ReactComponent as EmptyLike } from 'img/empty-like.svg'
+import { ReactComponent as FilledLike } from 'img/filled-like.svg'
 import { Link } from 'react-router-dom'
 import Button from 'components/Button/Button'
 
@@ -24,10 +25,16 @@ export interface I_ProductCardProps {
 }
 
 const ProductCard: FC<I_ProductCardProps> = (props) => {
+    const [isLiked, setIsLiked] = useState(true)
+
+    const likeHandler = () => {
+        setIsLiked(prev => !prev)
+    }
+
     return (
         <Wrapper>
-            <LikeWrapper>
-                <EmptyLike />
+            <LikeWrapper onClick={likeHandler}>
+                {!isLiked ? <FilledLike/> : <EmptyLike/>}
             </LikeWrapper>
 
             <Link to={`product/${props.slug || props.id}`}>
@@ -52,7 +59,7 @@ const ProductCard: FC<I_ProductCardProps> = (props) => {
             </Title>
 
             <Description>{props.desc}</Description>
-            <Button>В корзину</Button>
+            <Button type='primary'>В корзину</Button>
             
         </Wrapper>
     )
